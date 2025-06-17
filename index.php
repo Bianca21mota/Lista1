@@ -1,4 +1,10 @@
 <?php
+
+require 'helpers.php';
+echo"<hr>";
+echo validarEnderecoEmail('biancasilvadarochapitamota@gmail.com');
+//echo validarEnderecoEmail('https://google.com');
+
 //Irmão do console.log ()
 echo"<h1>Hello World</h1>";
 echo"<hr>";
@@ -10,6 +16,13 @@ if ($nome === "Ana" and $idade === 23){
     echo 'Seja bem vindo(a) ' . $nome . "<br>";
 }
 
+//PHPDoc
+/**
+ * Summary of saudacao
+ * @param string $nome Nome do usuario
+ * @return string mensagem de saudação com o nome do usuário 
+ * @author Bianca Mota <biancasilvadarochapitamota@gmail.com>
+ */
 function saudacao($nome) {
 return 'Olá, ' . $nome . "<br>";
 }
