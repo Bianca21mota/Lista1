@@ -19,4 +19,26 @@ echo saudacao($nome) . "<br>";
 //debugando variáveis
 var_dump($nome, $idade);
 
+echo "<br>";
+
+// 1 Forma de criar Array
+$arr = array(1,2,3,4,5);
+
+// 2 Forma de criar Array
+$arr2 = [1,2,3,4,5];
+
+// Encontrando um elemento pela sua posição dentro de um ARRAY
+echo $arr[0] . " " . $arr[1];
+ 
+echo "<br>";
+
+foreach($arr2 as $number) {
+     echo "Numero: ".$number."<br>";
+
+}
+
+
+
+
 ?>
+
