@@ -14,7 +14,8 @@ $alunos = [
     ];
 
     $media = 0;
-    //pular linha
+    
+    //criar uma linha horizontal
     echo "<hr>";
 
     //=> acessa os valores de cada chave 
