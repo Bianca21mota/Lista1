@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Verifica se o método de requisição é POST
-    if (isset($_POST["nomedocliente"], $_POST["SelecioneProduto"], $_POST["ClassificaçãodoProduto"], $_POST["Coment"])) {
+    if (isset($_POST["nomedocliente"], $_POST["SelecioneProduto"], $_POST["Classificaçãodoproduto"], $_POST["Coment"])) {
         // Verifica se os campos estão preenchidos
 
         $nomeCliente = $_POST["nomedocliente"];
@@ -32,25 +32,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <label for="nomedocliente">
             <p> Insira o seu Nome </p>
-        </label>
         <input type="text" id="nomedocliente" name="nomedocliente" placeholder=" Nome do cliente" required>
+        </label>
 
         <label for="SelecioneProduto">
             <p> Selecione o Produto </p>
         </label>
-        <select id="nomeproduto" name="nomeproduto" required>
-            <option value="Produto 1">Cadeira</option>
-            <option value="Produto 2">Mesa</option>
-            <option value="Produto 3">Estante</option>
-            <option value="Produto 4">Sofá</option>
-            <option value="Produto 5">Cama</option>
+        <select id="SelecioneProduto" name="SelecioneProduto" required>
+            <option value="Cadeira ">Cadeira</option>
+            <option value="Mesa">Mesa</option>
+            <option value="Estante">Estante</option>
+            <option value="Sofá">Sofá</option>
+            <option value="Cama">Cama</option>
         </select>
 
-        <label for="ClassificaçãodoProduto">
+        <label for="Classificaçãodoproduto">
             <p> Classifique o Produto </p>
         </label>
 
-        <input type="radio" name="Classificaçãodoproduto" id="avaliacao1" value="1 "> 1 Estrela
+        <input type="radio" name="Classificaçãodoproduto" id="avaliacao1" value="1"> 1 Estrela
 
         <input type="radio" name="Classificaçãodoproduto" id="avaliacao2" value="2"> 2 Estrelas
 
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <label for="Coment">
             <p> Adicione um comentário </p>
         </label>
-        <textarea name="comentarios" id="comentarios" placeholder="Adicione um comentário" required></textarea>
+        <textarea name="Coment" id="Coment" placeholder="Adicione um comentário" required></textarea>
         <button type="submit">Enviar Feedback</button>
 
     </form>
