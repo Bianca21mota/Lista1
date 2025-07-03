@@ -1,18 +1,16 @@
 <?php
-//SESSION VERIFICA A SESSÃO EM SI, A PÁGINA. ALGO TEMPORÁRIO
-// SERVER VERIFICA O SERVIDOR . 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Acessando um metodo de requisição, então só acesse ao metodo de requisição se ele for igual a POST
-    if (isset($_POST["userEmail"])) {
-        //ISSET VEFICA SE A VARIAVEL ESTÁ ARMAZENANDO ALGUM VALOR, SE NÃO ESTIVER ARMAZENANDO NADA, ELE RETORNA FALSO
-        // POST VERIFICA SE O INPUT ESTÁ PREENCHIDO E VAI PEGAR O VALOR PRESENTE NO CAMPO DE NAME NO INPUT 
-        $email = $_POST["userEmail"];
-        // A variavel $email recebe o valor do input com o name userEmail
-        echo $email;
-        // Exibe o valor do email
+//se o method de requisição for POST, o if vai coletar as informaçoes que estão no html sobre o post
+//server request method que signfica que você quer pegar um metodo de requisição, que no caso é o POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   //isset  verifica se a variavel foi declarada e se é diferente de null
+    if (isset($_POST['userEmail'])) {
+       $userEmail= $_POST['userEmail'];
+       echo $userEmail;
+         //a variavel userEmail recebe o valor do input com o name userEmail
 }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,12 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Document</title>
 </head>
 <body>
-    <form method="POST">
-        <label for="userEmail">
-            <p>Endereço de email</p>
-            </label>
-        <input type="email" id="userEmail" name="userEmail" placeholder="email@email.com" >
-        <button type="submit">Entrar</button>
-    </form>
+  <form method ="POST">
+  <label for ="userEmail">
+      <p>Endereço de Email</p>
+  </label>
+
+  <input type="email" id="userEmail" name="userEmail">
+  
+
+  <button type="submit">Cadastrar</button>
+  </form>
+
 </body>
 </html>
