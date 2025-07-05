@@ -1,6 +1,6 @@
 <?php
 
-class Alunos{
+class Aluno{
     public $nome;
     public $idade;
     public $matricula;
@@ -9,13 +9,12 @@ class Alunos{
     public $peso1;
     public $peso2;
     public $pesototal;
-
     public $notatotal;
 
     //public function exibirDados(){}
 
     // this é essencial para referenciar os atributos dentro da própria classe. 
-    function calcularMedia(){
+    public function calcularMedia(){
         $mediaPonderada = ($this->nota1 * $this->peso1 + $this->nota2 * $this->peso2) / $this->pesototal;
         return $mediaPonderada;
 
@@ -23,9 +22,9 @@ class Alunos{
 
 public function verificarAprovação(){
     if($this->calcularMedia() >= 7){
-        echo "Aprovado";
+        echo "Status: Aprovado";
     }else{
-        echo "Reprovado";
+        echo "Status: Reprovado";
     }
 }
 
